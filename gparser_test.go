@@ -108,13 +108,13 @@ func BenchmarkGoParser_Match(b *testing.B) {
 	// 规则表达式
 	expr := `(a == 1 && b == "b" && in_array(c, []int{100,99,98,97})) || (d == false)`
 	// 映射数据
-	data := map[string]interface{}{
-		"a": 1,
-		"b": "b",
-		"c": 100,
-		"d": true,
-	}
+	//data := map[string]interface{}{
+	//	"a": 1,
+	//	"b": "b",
+	//	"c": 100,
+	//	"d": true,
+	//}
 	for i := 0; i < b.N; i++ {
-		Match(expr, data)
+		Match(expr, nil)
 	}
 }
