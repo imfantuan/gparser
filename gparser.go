@@ -11,7 +11,7 @@ import (
 
 // Match 利用原生parser完成表达式与输入数据匹配任务
 func Match(expr string, data map[string]interface{}) (bool, error) {
-	if expr == "" {
+	if expr == "" || data == nil {
 		return true, nil
 	}
 	// 解析表达式
